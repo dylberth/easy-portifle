@@ -1,0 +1,118 @@
+body {
+    color: rgb(248, 212, 5);
+    background: linear-gradient(to bottom, #0a3d91, #1e5bcd);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid linear-gradient(to bottom, #0716e6, #ffdc18);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh; /* Altura total da tela */
+    background: linear-gradient(to bottom, #0716e6, #ffdc18);
+    color: rgb(7, 24, 126);
+
+.caixa-cadastro {
+    width: 500px;
+    margin: 2px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    border: 2px solid rgb(248, 212, 5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caixa-cadastro h2{
+    color: rgb(248,212,5);
+    margin-bottom: 20px;
+}
+
+.caixa-cadastro input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.caixa-cadastro button{
+    width: 95%;
+    padding: 10px;
+    background: rgb(248,212,5);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+}
+
+.conteudo {
+    width: 80%;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 100px;
+    text-align: center;
+}
+
+a {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    text-shadow: 5px 5px 8px black;
+    color: rgb(240, 216, 1); /*cor dos links*/
+    text-decoration: rgb(4, 55, 223); /*decoração dos links*/
+    font-weight: bold;
+    font-family: 'arial', sans-serif;
+}   
+a:hover{
+    color: rgb(13, 29, 255); /*cor dos links ao passar o mouse*/
+    text-decoration: underline;
+}
+footer{
+    position: fixed;
+    bottom: 2px;
+    max-width: 100%;
+    background: linear-gradient(to bottom, #f0c60a, #0b4cc4);
+    padding: 1px;
+    margin-top: 0px;
+    padding-left: 635px;
+    padding-right: 680px;
+    font-size:20px;
+    border:linear-gradient(to bottom, #e9d200, #1e5bcd);
+    text-align: center;
+    ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+}
+    
+  
+    img{ 
+        width: 300px; ;
+        height: 200px;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+        background-position: 55%;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+.titulo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    color:rgb(255, 214, 30);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 5px 3px 10px rgb(0, 0, 0);
+    position: absolute;
+    top: 70px;
+    left: 415px;
+    text-shadow: 4px 2px 0px rgba(18, 1, 78, 0.726);
+}
