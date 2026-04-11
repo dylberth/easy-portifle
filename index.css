@@ -82,16 +82,21 @@ footer {
     font-size: 20px;
     border: linear-gradient(to bottom, #e9d200, #1e5bcd);
     text-align: center;
+    border-top: 1px solid rgba(233, 210, 0, 0.8);
 }
 
 footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 footer li {
     list-style: none;
+    display: inline-block;
 }
 img {
     width: 300px;
