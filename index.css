@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    padding: 100px 0 0 0; /* padding-top consistente */
+    padding: 100px 0 140px 0; /* espaçamento inferior para o rodapé fixo */
     width: 100%;
     min-height: 100vh;
     height: auto;
