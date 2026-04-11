@@ -20,7 +20,8 @@ body {
     width: 90%;
     max-width: 400px;
     margin: 20px auto 40px auto; /*cima direita baixo esquerda */
-    padding: 20px;
+    padding: 30px 20px;
+    min-height: 420px;
    background: rgba(3, 0, 27, 0.781);
     border: 2px solid rgb(255, 214, 30);
     border-radius: 10px;
