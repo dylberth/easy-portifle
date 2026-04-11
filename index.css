@@ -1,4 +1,8 @@
+* {
+    box-sizing: border-box;
+}
 body {
+    overflow-x: hidden;
     color: rgb(248, 212, 5);
     background: linear-gradient(to bottom, #0716e6, #ffdc18);
     background-position: top;
