@@ -107,9 +107,9 @@ img {
 
 .center {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    flex-direction: column;
+    justify-content: flex-start; /*sobe tudo */
+    padding-top: 60px; /*controlar altura */
 }
 
 .titulo {
