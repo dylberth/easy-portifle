@@ -22,7 +22,7 @@ body {
     margin: 20px auto 40px auto; /*cima direita baixo esquerda */
     padding: 20px;
    background: rgba(3, 0, 27, 0.781);
-    border: 2px solid rgb(248, 212, 5);
+    border: 2px solid rgb(255, 214, 30);
     border-radius: 10px;
     text-align: center;
 }
