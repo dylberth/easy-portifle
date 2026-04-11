@@ -9,7 +9,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    padding: 60px 0 0 0;
+    padding: 60px 0 0 0; /*mais alto */
+    padding: 100px 0 0 0; /*mais baixo */
     width: 100%;
     min-height: 100vh;
     height: auto;
