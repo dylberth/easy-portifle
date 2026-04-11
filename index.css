@@ -55,13 +55,14 @@ body {
 }
 
 header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .logo {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .conteudo {
