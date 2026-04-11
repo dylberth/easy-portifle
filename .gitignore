@@ -1,0 +1,6 @@
+node_modules/
+banco_dados.db
+*.log
+.DS_Store
+.env
+.env.local

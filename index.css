@@ -171,6 +171,60 @@ footer a {
   color: #ffdc18;
 }
 
+/* Seção de Times */
+.times-section {
+  margin-top: 60px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.times-section h2 {
+  color: rgb(255, 214, 30);
+  margin: 0 0 28px;
+  font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+  text-align: center;
+}
+
+#times-list {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.time-item {
+  background: rgba(4, 7, 60, 0.92);
+  border: 1px solid rgba(255, 214, 30, 0.28);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.time-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 214, 30, 0.5);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.time-item h3 {
+  margin: 0 0 12px;
+  color: rgb(255, 214, 30);
+  font-size: 1.2rem;
+}
+
+.time-item p {
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.time-item small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
 @media (max-width: 720px) {
   .page-shell {
     padding: 40px 18px 140px;
@@ -192,5 +246,9 @@ footer a {
 
   .cadastro-card {
     padding: 28px 20px;
+  }
+
+  .times-section {
+    margin-top: 40px;
   }
 }
