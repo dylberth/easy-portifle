@@ -121,7 +121,7 @@ img {
     .logo {
         display: block;
         margin: 0% auto;
-        width: 100px; /*reduzir o tamanho no mobile */
+        width: 120px; /*reduzir o tamanho no mobile */
     }
     
 }
