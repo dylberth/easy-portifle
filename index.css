@@ -1,20 +1,18 @@
 body {
     color: rgb(248, 212, 5);
-    background: linear-gradient(to bottom, #0a3d91, #1e5bcd);
+    background: linear-gradient(to bottom, #0716e6, #ffdc18);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid linear-gradient(to bottom, #0716e6, #ffdc18);
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh; /* Altura total da tela */
-    background: linear-gradient(to bottom, #0716e6, #ffdc18);
+    height: 100vh;
     color: rgb(7, 24, 126);
+}
 
 .caixa-cadastro {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
     margin: 10px auto;
     padding: 20px;
     background: rgba(3, 0, 27, 0.781);
@@ -23,35 +21,36 @@ body {
     text-align: center;
 }
 
-.caixa-cadastro h2{
-    color: rgb(248,212,5);
+.caixa-cadastro h2 {
+    color: rgb(248, 212, 5);
     margin-bottom: 20px;
 }
 
-.caixa-cadastro input{
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
+.caixa-cadastro input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
 }
 
-.caixa-cadastro button{
+.caixa-cadastro button {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    background: rgb(248,212,5);
+    background: rgb(248, 212, 5);
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-}
+    box-sizing: border-box;
 }
 
 .conteudo {
     width: 80%;
-    margin: 0 auto; /* Centraliza o conteúdo */
+    margin: 0 auto;
     padding: 100px;
     text-align: center;
 }
@@ -59,16 +58,18 @@ body {
 a {
     -webkit-text-stroke: 1px rgb(0, 0, 0);
     text-shadow: 5px 5px 8px black;
-    color: rgb(240, 216, 1); /*cor dos links*/
-    text-decoration: rgb(4, 55, 223); /*decoração dos links*/
+    color: rgb(240, 216, 1);
+    text-decoration: rgb(4, 55, 223);
     font-weight: bold;
     font-family: 'arial', sans-serif;
-}   
-a:hover{
-    color: rgb(13, 29, 255); /*cor dos links ao passar o mouse*/
+}
+
+a:hover {
+    color: rgb(13, 29, 255);
     text-decoration: underline;
 }
-footer{
+
+footer {
     position: fixed;
     bottom: 2px;
     max-width: 100%;
@@ -77,42 +78,41 @@ footer{
     margin-top: 0px;
     padding-left: 635px;
     padding-right: 680px;
-    font-size:20px;
-    border:linear-gradient(to bottom, #e9d200, #1e5bcd);
+    font-size: 20px;
+    border: linear-gradient(to bottom, #e9d200, #1e5bcd);
     text-align: center;
-    ul{
+}
+
+footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li{
+footer li {
     list-style: none;
 }
+img {
+    width: 300px;
+    height: 200px;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    background-position: 55%;
 }
-    
-  
-    img{ 
-        width: 300px; ;
-        height: 200px;
-        border-bottom-right-radius: 10%;
-        border-bottom-left-radius: 10%;
-        background-position: 55%;
-    }
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-    }
-.titulo{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp (22px, 6vw, 48px);
-    color:rgb(255, 214, 30);
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.titulo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(22px, 6vw, 48px);
+    color: rgb(255, 214, 30);
     text-align: center;
     font-weight: bold;
     letter-spacing: 2px;
     text-shadow: 5px 3px 10px rgb(0, 0, 0);
-    text-shadow: 4px 2px 0px rgba(18, 1, 78, 0.726);
 }
