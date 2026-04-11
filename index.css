@@ -72,15 +72,13 @@ a:hover {
 
 footer {
     position: fixed;
-    bottom: 2px;
-    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     background: linear-gradient(to bottom, #f0c60a, #0b4cc4);
-    padding: 1px;
-    margin-top: 0px;
-    padding-left: 500px;
-    padding-right: 500px;
-    font-size: 20px;
-    border: linear-gradient(to bottom, #e9d200, #1e5bcd);
+    padding: 12px 20px;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
     text-align: center;
     border-top: 1px solid rgba(233, 210, 0, 0.8);
 }
@@ -91,7 +89,8 @@ footer ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 footer li {
