@@ -13,8 +13,9 @@ body {
 }
 
 .caixa-cadastro {
-    width: 400px;
-    margin: 10px auto;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
     padding: 20px;
     background: rgba(3, 0, 27, 0.781);
     border: 2px solid rgb(248, 212, 5);
