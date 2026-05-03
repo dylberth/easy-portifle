@@ -6,7 +6,7 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Configurar nodemailer para Gmail
 const transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Email para receber notificações
-const emailAdmin = 'josecarlos.futebol@gmail.com';
+const emailAdmin = process.env.EMAIL_ADMIN || 'dylberthpinheiro@gmail.com';
 
 // Middlewares
 app.use(cors());

@@ -2,12 +2,22 @@
 
 ## Configuração Inicial
 
-### 1. Instalar Dependências
+### 1. Criar arquivo de ambiente
+Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
+
+```env
+EMAIL_USER=seu_email@gmail.com
+EMAIL_PASSWORD=sua_senha_app_google
+EMAIL_ADMIN=dylberthpinheiro@gmail.com
+PORT=3000
+```
+
+### 2. Instalar Dependências
 ```bash
 npm install
 ```
 
-### 2. Iniciar o Servidor
+### 3. Iniciar o Servidor
 ```bash
 npm start
 ```

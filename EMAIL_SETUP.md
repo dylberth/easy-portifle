@@ -23,6 +23,7 @@
 ```
 EMAIL_USER=seu_email@gmail.com
 EMAIL_PASSWORD=abcd efgh ijkl mnop
+EMAIL_ADMIN=dylberthpinheiro@gmail.com
 ```
 
 ### Passo 4: Instalar Dependências
@@ -37,7 +38,7 @@ npm start
 
 ## 🔔 O que acontece quando um time se cadastra?
 
-✅ **Email para Admin** (josecarlos.futebol@gmail.com)
+✅ **Email para Admin** (dylberthpinheiro@gmail.com)
 - Notificação de novo cadastro
 - Dados completos do time
 

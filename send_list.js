@@ -12,6 +12,8 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+const emailAdmin = process.env.EMAIL_ADMIN || 'dylberthpinheiro@gmail.com';
+
 db.all('SELECT * FROM times ORDER BY data_cadastro DESC', (err, rows) => {
   if (err) {
     console.error('Erro ao consultar banco:', err);
@@ -29,7 +31,7 @@ db.all('SELECT * FROM times ORDER BY data_cadastro DESC', (err, rows) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'josecarlos.futebol@gmail.com',
+    to: emailAdmin,
     subject: 'Lista Completa de Cadastros - Guega Esportes',
     html: html
   };
