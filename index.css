@@ -107,6 +107,87 @@ body {
   background: #c82333;
 }
 
+.sucesso-card {
+  text-align: center;
+  max-width: 600px;
+}
+
+.sucesso-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.sucesso-card h2 {
+  color: #ffdc18;
+  margin-bottom: 16px;
+}
+
+.proximos-passos {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.proximos-passos h3 {
+  color: #ffdc18;
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.proximos-passos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.proximos-passos li {
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.acoes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.btn-voltar, .btn-contato {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-voltar {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 214, 30, 0.3);
+}
+
+.btn-voltar:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 214, 30, 0.6);
+}
+
+.btn-contato {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+  border: none;
+}
+
+.btn-contato:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
 .brand-text {
   flex: 1;
   min-width: 200px;

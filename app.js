@@ -25,9 +25,8 @@ async function cadastrarTime() {
     const data = await response.json();
 
     if (response.ok) {
-      alert(data.mensagem);
-      // Limpar formulário
-      document.querySelector('form').reset();
+      // Redirecionar para página de sucesso
+      window.location.href = 'cadastro-sucesso.html';
     } else {
       alert('Erro: ' + data.erro);
     }
