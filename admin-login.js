@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = 'adm123';
+const ADMIN_PASSWORD = 'Josec123';
 
 function exibirErro(mensagem) {
   const erro = document.getElementById('login-error');
