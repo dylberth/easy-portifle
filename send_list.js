@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const emailAdmin = process.env.EMAIL_ADMIN || 'dylberthpinheiro@gmail.com';
+const emailAdmin = process.env.EMAIL_ADMIN || 'josecarlos.futebol@gmail.com';
 
 db.all('SELECT * FROM times ORDER BY data_cadastro DESC', (err, rows) => {
   if (err) {

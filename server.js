@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Email para receber notificações
-const emailAdmin = process.env.EMAIL_ADMIN || 'dylberthpinheiro@gmail.com';
+const emailAdmin = process.env.EMAIL_ADMIN || 'josecarlos.futebol@gmail.com';
 
 // Middlewares
 app.use(cors());
