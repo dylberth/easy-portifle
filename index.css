@@ -92,6 +92,21 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.btn-excluir {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.btn-excluir:hover {
+  background: #c82333;
+}
+
 .brand-text {
   flex: 1;
   min-width: 200px;

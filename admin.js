@@ -7,6 +7,30 @@ function verificarAutenticacao() {
   return true;
 }
 
+async function excluirTime(id) {
+  if (!confirm('Tem certeza que deseja excluir este cadastro? Esta ação não pode ser desfeita.')) {
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/times/${id}`, {
+      method: 'DELETE'
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      alert('Cadastro excluído com sucesso!');
+      carregarCadastros(); // Recarregar a lista
+    } else {
+      alert('Erro ao excluir: ' + data.erro);
+    }
+  } catch (error) {
+    console.error('Erro ao excluir:', error);
+    alert('Erro ao conectar com o servidor');
+  }
+}
+
 async function carregarCadastros() {
   if (!verificarAutenticacao()) return;
 
@@ -38,6 +62,7 @@ async function carregarCadastros() {
           <th>Email</th>
           <th>Time</th>
           <th>Data de cadastro</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -53,12 +78,21 @@ async function carregarCadastros() {
         <td>${time.email}</td>
         <td>${time.nome_time}</td>
         <td>${new Date(time.data_cadastro).toLocaleString('pt-BR')}</td>
+        <td><button class="btn-excluir" data-id="${time.id}">Excluir</button></td>
       `;
       tbody.appendChild(tr);
     });
 
     timesList.innerHTML = '';
     timesList.appendChild(tabela);
+
+    // Adicionar event listeners aos botões de excluir
+    document.querySelectorAll('.btn-excluir').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.target.getAttribute('data-id');
+        excluirTime(id);
+      });
+    });
   } catch (error) {
     console.error('Erro ao carregar cadastros:', error);
     const timesList = document.getElementById('times-list');
