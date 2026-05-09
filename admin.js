@@ -7,13 +7,15 @@ function verificarAutenticacao() {
   return true;
 }
 
+const API_BASE = window.location.origin !== 'null' ? window.location.origin : 'http://localhost:3000';
+
 async function excluirTime(id) {
   if (!confirm('Tem certeza que deseja excluir este cadastro? Esta ação não pode ser desfeita.')) {
     return;
   }
 
   try {
-    const response = await fetch(`/api/times/${id}`, {
+    const response = await fetch(`${API_BASE}/api/times/${id}`, {
       method: 'DELETE'
     });
 
@@ -35,7 +37,7 @@ async function carregarCadastros() {
   if (!verificarAutenticacao()) return;
 
   try {
-    const response = await fetch('/api/times');
+    const response = await fetch(`${API_BASE}/api/times`);
     const times = await response.json();
 
     const timesList = document.getElementById('times-list');

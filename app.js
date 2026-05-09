@@ -1,3 +1,5 @@
+const API_BASE = window.location.origin !== 'null' ? window.location.origin : 'http://localhost:3000';
+
 // Função para cadastrar um novo time
 async function cadastrarTime() {
   const nome = document.querySelector('input[placeholder="Seu nome"]').value;
@@ -10,7 +12,7 @@ async function cadastrarTime() {
   }
 
   try {
-    const response = await fetch('/api/times', {
+    const response = await fetch(`${API_BASE}/api/times`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
