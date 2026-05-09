@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
@@ -8,17 +9,30 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const emailUser = process.env.EMAIL_USER;
+const emailPassword = process.env.EMAIL_PASSWORD;
+const emailAdmin = process.env.EMAIL_ADMIN || 'josecarlos.futebol@gmail.com';
+
+if (!emailUser || !emailPassword) {
+  console.warn('Atenção: EMAIL_USER ou EMAIL_PASSWORD não configurados. O envio de emails ficará desativado.');
+}
+
 // Configurar nodemailer para Gmail
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'seu_email@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'sua_senha_app'
+    user: emailUser,
+    pass: emailPassword
   }
 });
 
-// Email para receber notificações
-const emailAdmin = process.env.EMAIL_ADMIN || 'josecarlos.futebol@gmail.com';
+transporter.verify((error, success) => {
+  if (error) {
+    console.error('Falha ao verificar o transporte de e-mail:', error.message);
+  } else {
+    console.log('Transporte de e-mail verificado com sucesso.');
+  }
+});
 
 // Middlewares
 app.use(cors());
@@ -78,10 +92,15 @@ app.get('/api/times/:id', (req, res) => {
 
 // Função para enviar email
 async function enviarEmailNotificacao(nome_pessoa, email, nome_time) {
+  if (!emailUser || !emailPassword) {
+    console.warn('Email não enviado: credenciais de Gmail não configuradas.');
+    return;
+  }
+
   try {
     // Email para o admin
     const mailOptions = {
-      from: process.env.EMAIL_USER || 'seu_email@gmail.com',
+      from: emailUser,
       to: emailAdmin,
       subject: '🏆 Novo Time Cadastrado - Guega Esportes',
       html: `
@@ -100,7 +119,7 @@ async function enviarEmailNotificacao(nome_pessoa, email, nome_time) {
 
     // Email de confirmação para o time
     const mailConfirmacao = {
-      from: process.env.EMAIL_USER || 'seu_email@gmail.com',
+      from: emailUser,
       to: email,
       subject: '✅ Cadastro Confirmado - Guega Esportes',
       html: `
