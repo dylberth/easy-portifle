@@ -1,4 +1,12 @@
-const API_BASE = window.location.origin !== 'null' ? window.location.origin : 'http://localhost:3000';
+const API_BASE = location.protocol === 'file:' ? 'http://localhost:3000' : window.location.origin;
+
+async function parseJsonResponse(response) {
+  try {
+    return await response.json();
+  } catch (err) {
+    return null;
+  }
+}
 
 // Função para cadastrar um novo time
 async function cadastrarTime() {
@@ -24,13 +32,12 @@ async function cadastrarTime() {
       })
     });
 
-    const data = await response.json();
+    const data = await parseJsonResponse(response);
 
     if (response.ok) {
-      // Redirecionar para página de sucesso
       window.location.href = 'cadastro-sucesso.html';
     } else {
-      alert('Erro: ' + data.erro);
+      alert('Erro: ' + (data?.erro || response.statusText || 'Erro desconhecido'));
     }
   } catch (error) {
     console.error('Erro ao cadastrar:', error);

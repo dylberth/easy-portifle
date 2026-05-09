@@ -7,7 +7,15 @@ function verificarAutenticacao() {
   return true;
 }
 
-const API_BASE = window.location.origin !== 'null' ? window.location.origin : 'http://localhost:3000';
+const API_BASE = location.protocol === 'file:' ? 'http://localhost:3000' : window.location.origin;
+
+async function parseJsonResponse(response) {
+  try {
+    return await response.json();
+  } catch (err) {
+    return null;
+  }
+}
 
 async function excluirTime(id) {
   if (!confirm('Tem certeza que deseja excluir este cadastro? Esta ação não pode ser desfeita.')) {
@@ -19,13 +27,13 @@ async function excluirTime(id) {
       method: 'DELETE'
     });
 
-    const data = await response.json();
+    const data = await parseJsonResponse(response);
 
     if (response.ok) {
       alert('Cadastro excluído com sucesso!');
-      carregarCadastros(); // Recarregar a lista
+      carregarCadastros();
     } else {
-      alert('Erro ao excluir: ' + data.erro);
+      alert('Erro ao excluir: ' + (data?.erro || response.statusText || 'Erro desconhecido'));
     }
   } catch (error) {
     console.error('Erro ao excluir:', error);
@@ -38,7 +46,7 @@ async function carregarCadastros() {
 
   try {
     const response = await fetch(`${API_BASE}/api/times`);
-    const times = await response.json();
+    const times = await parseJsonResponse(response);
 
     const timesList = document.getElementById('times-list');
     if (!timesList) return;
